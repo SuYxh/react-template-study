@@ -1,5 +1,5 @@
 const path = require('path');
-const { rule } = require('postcss/lib/postcss');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -9,6 +9,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader'
           }
@@ -16,6 +17,11 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "css/[name].css"
+    })
+  ],
   output: {
     path: path.resolve(__dirname, '../dist')
   }

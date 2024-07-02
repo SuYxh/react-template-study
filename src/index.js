@@ -1,4 +1,4 @@
-import './index.css';
+import './styles/index.css';
 
 const a = 10
 const b = 11
