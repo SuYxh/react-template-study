@@ -15,6 +15,13 @@ module.exports = {
           }
         ],
       },
+      {
+        test: /\.(t|j)sx?$/,
+        loader: 'babel-loader'
+        // use: [
+        //   'bable-loader'
+        // ]
+      }
     ]
   },
   plugins: [
@@ -22,6 +29,7 @@ module.exports = {
       filename: "css/[name].css"
     })
   ],
+  devtool: false,
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: "js/[name].js"
