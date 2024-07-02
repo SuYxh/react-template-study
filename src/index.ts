@@ -1,4 +1,5 @@
 import './styles/index.css';
+import Button from './component/Button';
 
 const a = 10
 const b = 11
@@ -9,6 +10,7 @@ console.log(a+b);
 
 
 class Person {
+  name: string
   constructor (name) {
     this.name = name || 'jarvis'
   }
@@ -20,3 +22,6 @@ class Person {
 
 const p1 = new Person('xiaoming')
 console.log(p1);
+
+
+console.log(Button);

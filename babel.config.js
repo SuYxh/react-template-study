@@ -10,13 +10,13 @@ module.exports = (api) => {
           corejs: isWeb ? 3 : false,
         },
       ],
-      // "@babel/typescript",
-      // [
-      //   "@babel/react",
-      //   {
-      //     runtime: "automatic",
-      //   },
-      // ],
+      "@babel/typescript",
+      [
+        "@babel/react",
+        {
+          runtime: "automatic",
+        },
+      ],
     ],
     plugins: ["@loadable/babel-plugin", "@babel/plugin-transform-runtime"],
     env: {
